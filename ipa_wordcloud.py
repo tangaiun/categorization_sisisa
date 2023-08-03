@@ -34,7 +34,7 @@ with open('an.csv', 'r',encoding="shift-jis") as f:
     wordcloud = WordCloud(background_color='black',font_path="IPAfont00303\ipamp.ttf",width=800, height=400).generate(c_word)
 
     ## 結果を画像に保存
-    wordcloud.to_file('an_black.png')
+    wordcloud.to_file('js_bla.png')
 
     # 単語を多い順に並べる
     c = collections.Counter(docs)
