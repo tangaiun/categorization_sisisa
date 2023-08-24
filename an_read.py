@@ -5,7 +5,7 @@ from io import StringIO
 
 #UnicodeDecodeErrorは文字コードを変換する。この変換をエンコーディングという sep='\t'
 #csvの読み込み
-df = pd.read_csv('an_clean.csv', encoding="shift-jis")
+df = pd.read_csv('sample/an_clean.csv', encoding="shift-jis")
 print(df)
 # print(df.info())
 
