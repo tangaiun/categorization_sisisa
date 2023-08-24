@@ -4,10 +4,10 @@ import matplotlib.pyplot as plt
 from wordcloud import WordCloud
 
 # CSVファイルの読み込み
-df = pd.read_csv('an.csv', encoding="shift-jis")  # ファイル名は適宜変更してください
+df = pd.read_csv('sample/an.csv', encoding="shift-jis")  # ファイル名は適宜変更してください
 
 # 形態素解析器の初期化
-m = MeCab.Tagger()  # MeCabの辞書パスは適宜変更してください
+m = MeCab.Tagger("-Ochasen")  # MeCabの辞書パスは適宜変更してください
 
 # 名詞の抽出
 def extract_nouns(text):
