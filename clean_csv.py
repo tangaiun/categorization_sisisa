@@ -1,3 +1,4 @@
+#csvファイルをテキストクリーニング
 import csv
 
 # csvファイルにある\tを除去
@@ -8,7 +9,9 @@ def remove_tabs(input_file, output_file):
         writer = csv.writer(outfile)
         for row in reader:
             cleaned_row = [cell.replace('\t', '') for cell in row]
+            cleaned_row2 = [cell.replace('NaN', '') for cell in row]
             writer.writerow(cleaned_row)
+            writer.writerow(cleaned_row2)
 
 if __name__ == "__main__":
     input_file = "an.csv"  # 元のCSVファイル名を指定
